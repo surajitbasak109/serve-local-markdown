@@ -1,14 +1,13 @@
 {
   "name": "serve-local-markdown",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple server to serve and render markdown files",
   "main": "app.js",
   "bin": {
     "serve-local-markdown": "./app.js"
   },
-  "keywords": [],
   "author": "Surajit Basak <surajitbasak109@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
@@ -16,5 +15,16 @@
     "fs": "^0.0.1-security",
     "marked": "^12.0.2",
     "path": "^0.12.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surajitbasak109/serve-local-markdown"
+  },
+  "keywords": [
+    "markdown",
+    "server",
+    "express",
+    "ejs",
+    "marked"
+  ]
 }
