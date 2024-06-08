@@ -4,10 +4,11 @@
 
 ## Features
 
-- Recursively scans directories for Markdown files.
-- Renders Markdown files to HTML using `marked`.
-- Uses `ejs` for templating, allowing for a customizable layout.
-- Serves static files for custom CSS styling.
+- **Recursive directory scanning**: Automatically detects and serves markdown files from all subdirectories.
+- **Base64 encoded paths**: File paths are encoded in Base64 to ensure safe URL handling
+- **EJS templating**: Renders markdown files using EJS templates for a more customizable display.
+- **Static file serving**: Supports serving static CSS and other assets from a public directory.
+- **Use of application in multiple directories**: Now you can use this application on different directories. It will not throw any error for already used port.
 
 ## Installation
 

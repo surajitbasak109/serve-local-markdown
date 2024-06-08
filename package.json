@@ -1,6 +1,6 @@
 {
   "name": "serve-local-markdown",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple server to serve and render markdown files",
   "main": "app.js",
   "bin": {
