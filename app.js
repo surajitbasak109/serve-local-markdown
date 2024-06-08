@@ -6,10 +6,9 @@ const fs = require("fs");
 const { marked } = require("marked");
 const expressLayout = require("express-ejs-layouts");
 
-const { getFilesRecursively } = require("./utilities.js");
+const { getFilesRecursively, startServer } = require("./utilities.js");
 
 const app = express();
-const port = 3838;
 
 app.use(expressLayout);
 app.set("view engine", "ejs");
@@ -65,6 +64,4 @@ app.get("/file/:filePath", (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Markdown server is running at http://localhost:${port}`);
-});
+startServer(app);
