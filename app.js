@@ -6,7 +6,7 @@ const fs = require("fs");
 const { marked } = require("marked");
 const expressLayout = require("express-ejs-layouts");
 
-const { getFilesRecursively, startServer } = require("./utilities.js");
+const { getFilesRecursively, startServer, encodeBase64, decodeBase64 } = require("./utilities.js");
 
 const app = express();
 
@@ -21,7 +21,10 @@ app.get("/", (req, res) => {
     const directoryPath = process.cwd();
     const files = getFilesRecursively(directoryPath);
 
-    let fileLinks = files.map((file) => path.relative(directoryPath, file));
+    let fileLinks = files.map((file) => ({
+      encodedPath: encodeBase64(path.relative(directoryPath, file)),
+      name: path.relative(directoryPath, file)
+    }));
 
     const content = {
       title: "Markdown server",
@@ -39,7 +42,7 @@ app.get("/", (req, res) => {
 
 app.get("/file/:filePath", (req, res) => {
   try {
-    const filePath = path.join(process.cwd(), req.params.filePath);
+    const filePath = path.join(process.cwd(), decodeBase64(req.params.filePath));
 
     const baseNameWithoutExt = path.basename(filePath).split('.')[0];
 

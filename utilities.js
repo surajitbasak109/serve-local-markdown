@@ -71,7 +71,29 @@ async function startServer(app) {
   }
 }
 
+/**
+ * Encodes a file path to a Base64 string.
+ *
+ * @param {string} filePath - The file path to be encoded.
+ * @returns {string} The Base64 encoded string of the file path.
+ */
+function encodeBase64(filePath) {
+  return Buffer.from(filePath).toString("base64");
+}
+
+/**
+ * Decodes a Base64 encoded string to a file path.
+ *
+ * @param {string} encodedPath - The Base64 encoded string to be decoded.
+ * @returns {string} The decoded file path.
+ */
+function decodeBase64(encodedPath) {
+  return Buffer.from(encodedPath, "base64").toString("utf-8");
+}
+
 module.exports = {
   getFilesRecursively,
   startServer,
+  encodeBase64,
+  decodeBase64,
 };

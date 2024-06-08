@@ -1,8 +1,8 @@
 <ul>
   <% content.files.forEach(file => { %>
   <li>
-    <a href="/file/<%= encodeURIComponent(file) %>">
-      <%= file %>
+    <a href="/file/<%= encodeURIComponent(file.encodedPath) %>">
+      <%= file.name %>
     </a>
   </li>
   <% }) %>
