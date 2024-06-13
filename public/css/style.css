@@ -16,6 +16,20 @@
   --border-radius: 10px;
 }
 
+img {
+  max-width: 100%;
+}
+
+pre {
+  background: #000000;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 0.7rem 0.8rem;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  color: #e2e2e2;
+}
+
 body {
   font-family:
     system-ui,
@@ -41,9 +55,11 @@ a {
 h1 {
   font-size: var(--font-size-xl);
 }
+
 h2 {
   font-size: var(--font-size-lg);
 }
+
 h3 {
   font-size: var(--font-size-md);
 }
@@ -70,7 +86,6 @@ h3 {
   width: 30px;
   height: 30px;
 }
-
 
 /* footer */
 .app-footer {
