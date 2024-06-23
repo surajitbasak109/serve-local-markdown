@@ -9,6 +9,7 @@
 - **EJS templating**: Renders markdown files using EJS templates for a more customizable display.
 - **Static file serving**: Supports serving static CSS and other assets from a public directory.
 - **Use of application in multiple directories**: Now you can use this application on different directories. It will not throw any error for already used port.
+- **Syntax Highlighting**: Added syntax highlighting support for code snippets (includes: JavaScript, PHP, SQL C, C++ etc.)
 
 ## Installation
 
