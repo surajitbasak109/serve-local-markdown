@@ -7,17 +7,19 @@
   <title>
     <%= content.title %>
   </title>
+  <link href="/css/prism.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <%- include('../partials/header.ejs') %>
-    <div class="main">
-      <%- body %>
-    </div>
+      <div class="main">
+        <%- body %>
+      </div>
     <%- include('../partials/footer.ejs') %>
   </div>
+  <script src="/js/prism.js"></script>
 </body>
 
 </html>
