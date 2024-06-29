@@ -7,7 +7,7 @@
 :root {
   --black: #1c1c1c;
   --gray: #7e7e7e;
-  --gray-light: #e4e4e4;
+  --gray-light: #efefef;
   --red: #b30000;
   --font-size-base: 1rem;
   --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
@@ -28,6 +28,32 @@ pre {
   white-space: pre-wrap;
   font-size: 1rem;
   color: #e2e2e2;
+}
+
+pre>code {
+  color: #fff;
+}
+
+code {
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.9;
+  color: #232323;
+}
+
+:not(pre)>code {
+  display: inline-flex;
+  padding: 0 .125rem;
+  border-radius: .125rem;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: middle;
+}
+
+:not(pre)>code {
+  background: #fbfbfd;
+  color: #ca473f;
+  padding: 0 .25em;
 }
 
 body {
@@ -58,6 +84,11 @@ h1 {
 
 h2 {
   font-size: var(--font-size-lg);
+}
+
+h1,
+h2 {
+  border-bottom: 1px solid #ccc;
 }
 
 h3 {
