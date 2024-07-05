@@ -41,6 +41,58 @@ code {
   color: #232323;
 }
 
+table * {
+  border: 1px solid #e3e3e3;
+}
+
+table {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+  margin-bottom: .25rem;
+  margin-top: .25rem;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  table-layout: auto;
+}
+
+table thead {
+  border-bottom: 1px solid #d1d5db;
+}
+
+table th:first-child {
+  border-top-left-radius: .375rem;
+  padding-left: 0;
+}
+
+table th {
+  border-left-width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-top-width: 1px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table tbody td {
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-color: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem 0.75rem;
+  vertical-align: baseline;
+}
+
+table tbody td:first-child,
+table tfoot td:first-child {
+  padding-left: 0;
+}
+
 :not(pre)>code {
   display: inline-flex;
   padding: 0 .125rem;
@@ -122,4 +174,49 @@ h3 {
 .app-footer {
   margin: 4rem;
   text-align: center;
+}
+
+.toc-opener {
+    position: fixed;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    outline: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #eb8113;
+    color: #fff;
+    border: 1px solid #e19200;
+    box-shadow: 3px 2px 0 rgb(205 112 15 / 20%);
+}
+
+.toc {
+    width: 400px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: white;
+    overflow-y: auto;
+    box-shadow: -10px 0px 8px 3px rgba(0, 0, 0, 0.5);
+    padding-inline: 0.5rem;
+}
+
+.toc ul li {
+    padding-block: 0.3rem;
+    cursor: pointer;
+}
+
+.close-toc {
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
 }
